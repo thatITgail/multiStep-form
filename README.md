@@ -126,6 +126,6 @@ Users should be able to:
 
 ## Author
 
-- Website - Michelle Dim(https://codepen.io/michelle122)
+- Website - [Michelle Dim](https://codepen.io/michelle122)
 - Frontend Mentor - [@thatITgail](https://www.frontendmentor.io/profile/thatITgail)
 - Twitter - [@Mich_ellene](https://www.twitter.com/Mich_ellene)

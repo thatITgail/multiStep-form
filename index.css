@@ -88,7 +88,7 @@ button{
   position: relative;
   width: min(28rem, 100%);
   margin: 0 auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* sidebar section */
@@ -140,7 +140,7 @@ button{
 /* form section */
 .form-wrapper{
   position: relative;
-  top: -4.5rem;
+  top: -5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 85%;
@@ -394,6 +394,11 @@ hr{
   border: 1px solid var(--Blue-950);
   color: var(--Blue-100);
   border-radius: 5px;
+}
+.next-btn:hover{
+  background-color: var(--Purple-600);
+  border-color: var(--Purple-600);
+  color: var(--White);
 }
 
 .attribution { 

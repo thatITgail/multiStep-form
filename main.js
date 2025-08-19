@@ -111,8 +111,6 @@ window.addEventListener("DOMContentLoaded", (e) => {
   function nextStep(){
     if(stepCount === 0 && !validateStep1()) return;
      
-  
-
     stepCount++;
     showStep(stepCount);
 
@@ -126,6 +124,21 @@ window.addEventListener("DOMContentLoaded", (e) => {
       showStep(stepCount);
     }
   }
+
+  // sidebar click navigation
+  navLinks.forEach((link, i) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      if(i > stepCount && stepCount === 0 && !validateStep1()) return;
+     if(i === 3 && stepCount !== 4){
+       stepCount = 3;
+       populateSummary();
+     }else{
+       stepCount = i;
+     }
+      showStep(stepCount);
+    })    
+  })
    
 
   // PLAN SELECTION (STEP 2)
