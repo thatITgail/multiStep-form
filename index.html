@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="index.css">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="multistep-container">
+      <!-- Sidebar start -->
+      <aside class="multistep-sidebar">
+        <ul class="sidebar-content-container flex">
+          <!-- step 1 -->
+          <li class="sidebar-content flex active">
+            <a href="#" class="sidebar-num" data-step="step1">1</a>
+            <div class="sidebar-info">
+              <p class="sidebar-info-step">step 1</p>
+              <p class="sidebar-info-text">your info</p>
+            </div>
+          </li>
+          <!-- step 2 -->
+           <li class="sidebar-content flex">
+            <a href="#" class="sidebar-num" data-step="step2">2</a>
+            <div class="sidebar-info">
+              <p class="sidebar-info-step">step 2</p>
+              <p class="sidebar-info-text">select plan</p>
+            </div>
+          </li>
+          <!-- step 3 -->
+           <li class="sidebar-content flex">
+            <a href="#" class="sidebar-num" data-step="step3">3</a>
+            <div class="sidebar-info">
+              <p class="sidebar-info-step">step 3</p>
+              <p class="sidebar-info-text">add-ons</p>
+            </div>
+          </li>
+          <!-- step 4 -->
+           <li class="sidebar-content flex">
+            <a href="#" class="sidebar-num" data-step="step4">4</a>
+            <div class="sidebar-info">
+              <p class="sidebar-info-step">step 4</p>
+              <p class="sidebar-info-text">summary</p>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Form section -->
+      <form action="/" method="post">
+        <section class="form-wrapper flex">
+
+          <!-- Step1 start -->
+          <article id="step1" class="each-form">
+            <header class="personal-title">
+              <h2> Personal info</h2>
+              <p>Please provide your name, email address, and phone number.</p>
+            </header>
+
+            <fieldset class="personal-contents">
+              <!-- fullname -->
+              <div class="flex">
+                <label for="fullname">Name</label>
+                <small class="error-msg">This field is required</small>
+              </div>
+              <input type="text" name="fullname" id="fullname" placeholder="e.g. Stephen King" aria-required="true"/>
+              
+              <!-- email -->
+              <div class="flex">
+                <label for="email">Email Address</label>
+                <small class="error-msg">This field is required</small>
+              </div>
+              <input type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com" aria-required="true" autocomplete="email">
+
+              <!-- phone number -->
+              <div class="flex">
+                <label for="phone-number">Phone Number</label>
+                <small class="error-msg">This field is required</small>
+              </div>
+              <input type="tel" name="phone-number" id="phone-number" placeholder=" e.g. +1 234 567 890" autocomplete="tel" aria-required="true">
+            </fieldset>
+          </article>
+
+          <!-- Next Step -->
+          <article id="step2" class="each-form">
+            <header class="plan-title">
+              <h2>Select your plan</h2>
+              <p>You have the option of monthly or yearly billing.</p>
+            </header>
+
+            <fieldset class="plan-contents-container flex">
+              <div class="plan-content flex">
+                <img src="./assets/images/icon-arcade.svg" alt="a gold background with white colored arcade icon">
+                <div class="plan-info">
+                  <h3 class="plan">Arcade</h3>
+                  <p class="price monthly"> $9/mo</p>
+                  <p class="price yearly">$90/yr</p>
+                  <span class="yearly free-package">2 months free</span>
+                </div>
+              </div>
+
+              <div class="plan-content flex">
+                <img src="./assets/images/icon-advanced.svg" alt="an orange background with white colored icon">
+                <div class="plan-info">
+                  <h3 class="plan">Advanced</h3>
+                  <p class="price monthly"> $12/mo</p>
+                  <p class="price yearly">$120/yr</p>
+                  <span class="yearly free-package">2 months free</span>
+                </div>
+              </div>
+
+               <div class="plan-content flex">
+                <img src="./assets/images/icon-pro.svg" alt="a deep blue background with white colored game pad">
+                <div class="plan-info">
+                  <h3 class="plan">Pro</h3>
+                  <p class="price monthly"> $15/mo</p>
+                  <p class="price yearly">$150/yr</p>
+                  <span class="yearly free-package">2 months free</span>
+                </div>
+              </div>
+            </fieldset>
+            <div class="plan-btn-container flex">
+              <span class="plan-btn-text monthly">Monthly</span>
+              <button type="button" class="plan-btn">
+                <i class="white-bg"></i>
+              </button>
+              <p class="plan-btn-text yearly">Yearly</p>
+              </div>
+          </article>
+
+          <!-- Next step -->
+          <article id="step3" class="each-form">
+            <header class="add-ons-title">
+              <h2>Pick add-ons</h2>
+              <p>Add-ons help enhance your gaming experience.</p>
+            </header>
+
+            <div class="add-ons-content-container">
+              <fieldset class="add-ons-content flex">
+              <div class="add-ons-details flex">
+                <input type="checkbox" name="online" id="online"/>
+                <div class="add-ons-info">
+                  <label for="online">Online service</label>
+                  <p class="add-ons-text">Access to multiplayer games</p>
+                </div>
+              </div>
+              <p class="add-ons-price">
+                <span class="monthly">+$1/mo</span>
+                <span class="yearly">+$10/yr</span>
+              </p>
+            </fieldset>
+
+            <fieldset class="add-ons-content flex">
+              <div class="add-ons-details flex">
+                <input type="checkbox" name="storage" id="storage"/>
+                <div class="add-ons-info">
+                  <label for="storage">Larger storage</label>
+                  <p class="add-ons-text">Extra 1TB of cloud save</p>
+                </div>
+              </div>
+              <p class="add-ons-price">
+                <span class="monthly">+$2/mo</span>
+                <span class="yearly">+$20/yr</span>
+              </p>
+            </fieldset>
+
+            <fieldset class="add-ons-content flex">
+              <div class="add-ons-details flex">
+                <input type="checkbox" name="custom" id="custom"/>
+                <div class="add-ons-info">
+                  <label for="custom">Customizable profile</label>
+                  <p class="add-ons-text">Custom theme on your profile</p>
+                </div>
+              </div>
+              <p class="add-ons-price">
+                <span class="monthly">+$2/mo</span>
+                <span class="yearly">+$20/yr</span>
+              </p>
+            </fieldset>
+            </div>
+          </article>
+
+          <!-- summary -->
+          <article id="step4" class="each-form">
+            <header class="summary-title">
+              <h2>Finishing up</h2>
+              <p>Double-check everything looks OK before confirming.</p>
+            </header>
+            <div class="summary-container">
+              <div class="plan-summary flex">
+                <div class="plan-summary-info">
+                  <h3 class="plan-summary-title">
+                    <span class="plan-summary-name"></span> 
+                    <span class="plan-summary-type"></span>
+                  </h3>
+                  <button type="button" class="plan-summary-change-btn">Change</button>
+                </div>
+                <p class="plan-summary-price"></p>
+              </div>
+              <hr>
+              <ul class="add-ons-summary">
+              </ul>
+            </div>
+            <div class="summary-total flex">
+              <p class="summary-total-text">Total <span class="summary-plan-date"></span></p>
+              <p class="summary-total-price"></p>
+            </div>
+          </article>
+
+          <article id="step5" class="each-form">
+            <div class="success-modal-info">
+              <img src="./assets/images/icon-thank-you.svg" alt="a white checkmark icon with orange background">
+              <h4>Thank you!</h4>
+              <p class="success-modal-text">Thanks for confirming you subscription! We hope you have fun using our platform.If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+            </div>
+          </article>
+        </section>
+        <div class="form-btn-container flex">
+          <button type="button" class="go-back-btn">Go Back</button>
+          <button type="button" class="next-btn">Next Step</button>
+        </div>
+      </form>
+    </main>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Michelle Dim</a>.
+  </div>
+
+  <!-- JS -->
+  <script src="main.js"></script>
+</body>
+</html>
